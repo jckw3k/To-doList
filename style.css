@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+#logo img{
+    width: 60px;
+    height: 60px;
+    margin-left: 55px;
+    float: left;
+    opacity: 1;
+} 
+body{
+    display: grid;
+    grid-template-areas: "header"
+                        "content";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr ;
+    min-height: 100vh;
+    background-color: rgb(0, 136, 136);
+}
+
+header{
+    grid-area: header;
+    background-color: rgb(0, 136, 136);
+    color: rgb(33, 222, 46);
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.head-nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.welcome-container{
+    color: white;
+    padding: 20px;
+}
+
+
+#loginOut{
+    font-size: 30px;
+}
+.logout-dropdown-button{
+    background-color:rgb(0, 136, 136) ;
+    padding: 15px;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+.dropdown-button:hover{
+    background-color:rgb(2, 125, 125);
+    color: lightgray;
+}
+
+/* index.php */
+.main{
+    grid-area:content;
+    background-color: rgb(0, 136, 136);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px; 
+}
+.main h1{
+    color: white;
+}
+
+.btn-group button{
+    border-radius: 20px;
+    background-color: rgb(0, 136, 136);
+    padding: 10px;
+    border: none;
+    outline: none;
+    padding: none;
+    font-size: 25px ;
+}
+.btn-group button.clicked{
+    background-color: rgb(0, 136, 136);
+}
+.btn-group button:hover{
+    color: rgb(222, 217, 217);
+    background-color: rgb(0, 136, 136);
+}
+
+.add-task-container{
+    height: 100px;
+    width: 600px;
+    border-radius: 15px;
+    background-color: white;
+    padding: 20px;
+    top: 140px;
+    box-shadow: 5px 5px 5px 5px rgba(0.25,0.25,0.25,0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-input{
+    height: 45px;
+    width: 470px;
+    border-radius: 15px;
+    padding: 15px;
+    border: none;
+    outline: none;
+}
+.todo-input:hover{
+    border-bottom: thin gray;
+}
+
+#plus-logo-button{
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    background-color: rgb(248, 170, 26);
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    border: solid white;
+}
+#plus-logo-button:hover{
+    background-color: rgb(219, 146, 11);
+}
+
+.count-sort-container{
+    display: flex;
+    justify-content:space-between; 
+    align-items: center;
+    gap: 2em;
+    padding:20px;
+}
+.task-count-container{
+    color:rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    font-size: 22px;
+}
+.dropdown-button{
+    background-color:rgb(0, 136, 136) ;
+    padding: 5px 5px 5px 10px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+.dropdown-button:hover{
+    background-color:rgb(2, 125, 125);
+    color: lightgray;
+}
+.dropdown-menu a:hover{
+    background-color: lightgray;
+}
+.task-container{
+    height: 60px;
+    width: 500px;
+    border-radius:35px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    box-shadow: 5px 5px 5px 5px rgba(0.25,0.25,0.25,0.25);
+    cursor: pointer;
+}
+
+.task-container:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    border: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0.25,0.25,0.25,0.25);
+}
+
+.task-container-item {
+     /*flex:1; Ensure items take up equal space */
+    text-align: center; /* Center the text inside each item */
+}
+#task-container-desc{
+    width: 50%;
+}
+#task-container-duedate{
+    width: 30%;
+}
+#task-container-button{
+    width: 20%;
+}
+#delete-button{
+    border-radius: 50%;
+}
+
+.tick-button {
+    border-radius: 50%;
+    border: solid 2px rgba(0, 0, 0, 0.272);
+    background-color: white; /* Default color */
+    color: white;
+    height: 35px;
+    width: 35px;
+  }
+.tick-button.active {
+    background-color: #28a745; /* Toggled color */
+  }
+/* End index.php */
+
+/* details.php */
+.details-outer-container{
+    height: auto;
+    width: 500px;
+    border-radius:35px;
+    background-color: white;
+    padding: 20px;
+    gap: 10px; 
+    box-shadow: 5px 5px 5px 5px rgba(0.25,0.25,0.25,0.25);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.details-container{
+    height: auto;
+    width: 450px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    font-size: large;
+}
+
+.details-label{
+    text-align: left;
+    padding: 15px ;
+    width: 30%;
+}
+
+.details-item {
+   text-align: left;
+   padding: 15px ;
+    width: 70%;
+
+}
+
+#image-container img{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    max-width: 100%; 
+    height: auto;
+}
+
+#image-container img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    box-shadow: 5px 5px 5px 5px rgba(0.25,0.25,0.25,0.25);
+}
+
+.button-container{
+    width: 450px;
+    display: flex;
+    justify-content:space-between;
+    gap: 1em;
+}
+#edit-button{
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    font-size: 21px;
+}
+#back-button{
+    border-radius: 35px;
+}
+/* End details.php */
+
+/* edit.php */
+.edit-container{
+    height: auto;
+    width: 450px;
+    border-radius:35px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    box-shadow: 5px 5px 5px 5px rgba(0.25,0.25,0.25,0.25);
+    font-size: large;
+}
+.edit-item {
+    text-align: left;
+    width: 100%;
+    outline: none;
+    border: none;
+  }
+
+.edit-image-container{
+    display: flex;
+    flex-direction: column;
+}
+/* End edit.php */
